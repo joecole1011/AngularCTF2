@@ -11,16 +11,16 @@ export class ProductListComponent implements OnInit {
   constructor() {
     this.products = [];
     this.products.push( {
-        name: 'ส้มโอ',
-        price: 990
+        name: 'Ipad',
+        price: 15000
     });
     this.products.push( {
-      name: 'แตงโม',
-      price: 1000
+      name: 'Iphone 12 Max',
+      price: 50000
     });
   this.products.push( {
-    name: 'มะพร้าวน้ำหอม',
-    price: 500
+    name: ' Mac',
+    price: 60000
     });
   }
 
