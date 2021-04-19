@@ -1,9 +1,9 @@
-.box{
-    width: 200px;;
+.box {
+    width: 200px;
     display: inline-block;
     border: 1px solid gray;
     text-align: center;
 }
-.selected{
-    background: lightgray;
+.selected {
+    background: lightgrey;
 }
