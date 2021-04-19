@@ -2,25 +2,25 @@ import {Component,OnInit, ViewChild, ViewChildren, QueryList} from '@angular/cor
 import { Product } from './product';
 import { ProductItemComponent } from './product-item/product-item.component';
 @Component({
-selector: 'app-product-list',
-templateUrl: './product-list.component.html',
-styleUrls: ['./product-list.component.css']
+      selector: 'app-product-list',
+      templateUrl: './product-list.component.html',
+      styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-@ViewChildren(ProductItemComponent)
-productItems: QueryList<ProductItemComponent>;
+      @ViewChildren(ProductItemComponent)
+      productItems: QueryList<ProductItemComponent>;
 
 products: Product[];
-constructor() {
-  this.products = [];
+      constructor() {
+      this.products = [];
 }
 ngOnInit() {}
-selectedProduct(productComponent: ProductItemComponent) {
-alert(`Product ${productComponent.product.name} selected`);
-this.productItems.forEach(p => {
-  p.isSelected = false;
-});
-productComponent.isSelected = true;
+      selectedProduct(productComponent: ProductItemComponent) {
+      alert(`Product ${productComponent.product.name} selected`);
+      this.productItems.forEach(p => {
+        p.isSelected = false;
+      });
+      productComponent.isSelected = true;
 }
 }
 

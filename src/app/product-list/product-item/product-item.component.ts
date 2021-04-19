@@ -1,62 +1,61 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { Product } from '../product';
-@Component({
-selector: 'app-product-item',
-templateUrl: './product-item.component.html',
-styleUrls: ['./product-item.component.css']
-})
-export class ProductItemComponent implements OnInit {
-@Input()
-product: Product;
-@Output()
-OnSelected: EventEmitter<ProductItemComponent> = new EventEmitter();
-isSelected: boolean;
+  import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+  import { Product } from '../product';
+  @Component({
+      selector: 'app-product-item',
+      templateUrl: './product-item.component.html',
+      styleUrls: ['./product-item.component.css']
+  })
+  export class ProductItemComponent implements OnInit {
+      @Input()
+      product: Product;
+      @Output()
+      OnSelected: EventEmitter<ProductItemComponent> = new EventEmitter();
+      isSelected: boolean;
 
-constructor() {}
+      constructor() {}
 
-ngOnInit() {}
+      ngOnInit() {}
 
-select() {
-  this.OnSelected.emit(this);
-
+      select() {
+        this.OnSelected.emit(this);
+    }
   }
-}
 
 
 
 
 
-// import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-// import { Product } from '../product';
+  // import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+  // import { Product } from '../product';
 
-// @Component({
-//   selector: 'app-product-item',
-//   templateUrl: './product-item.component.html',
-//   styleUrls: ['./product-item.component.css']
-// })
-// export class ProductItemComponent implements OnInit {
-  
-  
+  // @Component({
+  //   selector: 'app-product-item',
+  //   templateUrl: './product-item.component.html',
+  //   styleUrls: ['./product-item.component.css']
+  // })
+  // export class ProductItemComponent implements OnInit {
+    
+    
 
-//   @Input()
-//   product: Product;
-  
+  //   @Input()
+  //   product: Product;
+    
 
-//   @Output()
-//   // OnSelected: EventEmitter<Product> = new EventEmitter();//ViewChild
-//   OnSelected: EventEmitter<ProductItemComponent> = new EventEmitter();
+  //   @Output()
+  //   // OnSelected: EventEmitter<Product> = new EventEmitter();//ViewChild
+  //   OnSelected: EventEmitter<ProductItemComponent> = new EventEmitter();
 
-//   isSelected: boolean ;
-  
-  
+  //   isSelected: boolean ;
+    
+    
 
-//   constructor() { }
+  //   constructor() { }
 
-//   ngOnInit(): void {  }
+  //   ngOnInit(): void {  }
 
-//   select(){
-//     // this.OnSelected.emit(this.product);//ViewChild
-//     this.OnSelected.emit(this);    
-//   }
+  //   select(){
+  //     // this.OnSelected.emit(this.product);//ViewChild
+  //     this.OnSelected.emit(this);    
+  //   }
 
-// }
+  // }
