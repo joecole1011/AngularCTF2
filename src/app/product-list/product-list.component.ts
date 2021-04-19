@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild , ViewChildren ,  QueryList } from '@angular/core';
 import { Product } from './product';
+import { ProductItemComponent } from './product-item/product-item.component';
 
 @Component({
   selector: 'app-product-list',
@@ -7,9 +8,14 @@ import { Product } from './product';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
+  @ViewChildren(ProductItemComponent)
+  productItems: QueryList<ProductItemComponent>;
+
   products: Product[];
   constructor() {
     this.products = [];
+  }
+
   //   this.products = [];
   //   this.products.push( {
   //       name: 'Ipad',
@@ -25,13 +31,33 @@ export class ProductListComponent implements OnInit {
   //   });
   //Recep#2
   //Lab 4 - ทดสอบ Reipe#3 ViewChild
-  }
+  
 
-  ngOnInit(): void {
-  }
-  selectedProduct(product: Product) {
-    alert(`Product ${product.name} selected`);
+  
+  ngOnInit(): void {  }
 
+  selectedProduct(productComponent:ProductItemComponent){
+    alert(`Product ${productComponent.product.name} Selected`);
+    this.productItems.forEach (p => {
+      p.isSelected = false;
+      
+    });
+      productComponent.isSelected = true ;
   }
+  
+  
+  // selectedProduct(productComponent:ProductItemComponent){
+  //   alert(`Product ${productComponent.product.name} Selected`);
+  //   this.productItems.forEach (p => {
+  //     p.isSelected = false;
+      
+  //   });
+  //   productComponent.isSelected = true ;
+  // }
+  // selectedProduct(product: Product) {
+  //   alert(`Product ${product.name} selected`);
+
+  // } 
+  //ViewChild
 
 }
