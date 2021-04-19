@@ -11,17 +11,17 @@ export class ProductListComponent implements OnInit {
   constructor() {
     this.products = [];
     this.products.push( {
-        name: 'Ipad',
-        price: 15000
+        name: 'ส้มโอ',
+        price: 990
     });
     this.products.push( {
-      name: 'Iphone 12 Max',
-      price: 50000
-    });
+      name: 'แตงโม',
+      price: 1000
+  });
   this.products.push( {
-    name: ' Mac',
-    price: 60000
-    });
+    name: 'มะพร้าวน้ำหอม',
+    price: 500
+  });
    }
 
   ngOnInit(): void {
