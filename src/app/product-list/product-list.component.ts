@@ -24,7 +24,7 @@ export class ProductListComponent implements OnInit {
   //   price: 60000
   //   });
   //Recep#2
-  //อัพขึ้นใหม่
+  //Lab 4 - ทดสอบ Reipe#3 ViewChild
   }
 
   ngOnInit(): void {
