@@ -39,7 +39,7 @@ export class ProductListComponent implements OnInit {
   selectedProduct(productComponent:ProductItemComponent){
     alert(`Product ${productComponent.product.name} Selected`);
     this.productItems.forEach (p => {
-      p.isSelected = false;
+      p.isSelected = false ;
       
     });
       productComponent.isSelected = true ;
