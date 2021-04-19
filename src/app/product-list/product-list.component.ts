@@ -14,15 +14,22 @@ products: Product[];
       constructor() {
       this.products = [];
 }
-ngOnInit() {}
-      selectedProduct(productComponent: ProductItemComponent) {
-      alert(`Product ${productComponent.product.name} selected`);
-      this.productItems.forEach(p => {
-        p.isSelected = false;
-      });
-      productComponent.isSelected = true;
+ngOnInit(): void {}
+      selectedProduct(product : ProductItemComponent) {
+      alert(`Product ${product.product.name} selected`);
+      this.productItems.forEach(p => (p.isSelected = false));
+     }
+      //productComponent.isSelected = true;
 }
-}
+
+//       selectedProduct(productComponent: ProductItemComponent) {
+//       alert(`Product ${productComponent.product.name} selected`);
+//       this.productItems.forEach(p => {
+//         p.isSelected = false;
+//       });
+//       productComponent.isSelected = true;
+// }
+
 
 
 
