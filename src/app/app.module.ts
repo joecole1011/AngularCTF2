@@ -7,6 +7,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductItemComponent } from './product-list/product-item/product-item.component';
 import { FormsModule } from '@angular/forms';
 import { PanelComponent } from './panel/panel.component';
+import { ToDoListComponent } from './to-do-list/to-do-list.component';
+import { TaskItemComponent } from './to-do-list/task-item/task-item.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { PanelComponent } from './panel/panel.component';
     HomeComponent,
     ProductListComponent,
     ProductItemComponent,
-    PanelComponent
+    PanelComponent,
+    ToDoListComponent,
+    TaskItemComponent
   ],
   imports: [
     BrowserModule ,FormsModule
