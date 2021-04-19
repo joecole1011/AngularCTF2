@@ -8,7 +8,7 @@ import { Product } from '../product';
 })
 export class ProductItemComponent implements OnInit {
   
-  isSelected: boolean ;
+  isSelected?: boolean ;
 
   @Input()
   product: Product;
