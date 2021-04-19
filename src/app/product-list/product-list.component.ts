@@ -17,12 +17,12 @@ export class ProductListComponent implements OnInit {
     this.products.push( {
       name: 'แตงโม',
       price: 1000
-  });
+    });
   this.products.push( {
     name: 'มะพร้าวน้ำหอม',
     price: 500
-  });
-   }
+    });
+  }
 
   ngOnInit(): void {
   }
