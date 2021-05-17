@@ -26,6 +26,8 @@ export class ToDoListComponent implements OnInit {
   description;
   items2 = [];
 
+  id = 0
+
   constructor() {
     // this.task = [];
   }
@@ -33,14 +35,17 @@ export class ToDoListComponent implements OnInit {
 
   addclick() {
     if (this.name == '') {
-      if (this.description == '') {
-      }
     } else {
       this.items.push(this.name);
-      this.items2.push(this.description);
       this.name = '';
+    }
+
+    if (this.description == '') {
+    } else {
+      this.items2.push(this.description);
       this.description = '';
     }
+    this.id++
   }
 
   public deletetask(index) {

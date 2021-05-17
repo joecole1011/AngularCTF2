@@ -10,6 +10,7 @@ import { ProductItemComponent } from './product-list/product-item/product-item.c
 import { PanelComponent } from './panel/panel.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { TodoappComponent } from './todoapp/todoapp.component';
+import { ToDoItemComponent } from './to-do-list/to-do-item/to-do-item.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { TodoappComponent } from './todoapp/todoapp.component';
     PanelComponent,
     ToDoListComponent,
     TodoappComponent,
+    ToDoItemComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
