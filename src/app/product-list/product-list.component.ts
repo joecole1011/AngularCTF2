@@ -1,25 +1,31 @@
-import {Component,OnInit, ViewChild, ViewChildren, QueryList} from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ViewChildren,
+  QueryList,
+} from '@angular/core';
 import { Product } from './product';
 import { ProductItemComponent } from './product-item/product-item.component';
 @Component({
-      selector: 'app-product-list',
-      templateUrl: './product-list.component.html',
-      styleUrls: ['./product-list.component.css']
+  selector: 'app-product-list',
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
-      @ViewChildren(ProductItemComponent)
-      productItems: QueryList<ProductItemComponent>;
+  @ViewChildren(ProductItemComponent)
+  productItems: QueryList<ProductItemComponent>;
 
-products: Product[];
-      constructor() {
-      this.products = [];
-}
-ngOnInit(): void {}
-      selectedProduct(product : ProductItemComponent) {
-      alert(`Product ${product.product.name} selected`);
-      this.productItems.forEach(p => (p.isSelected = false));
-     }
-      //productComponent.isSelected = true;
+  products: Product[];
+  constructor() {
+    this.products = [];
+  }
+  ngOnInit(): void {}
+  
+  selectedProduct(product: ProductItemComponent) {
+    alert(`Product ${product.product.name} selected`);
+    this.productItems.forEach((p) => (p.isSelected = false));
+  }
 }
 
 //       selectedProduct(productComponent: ProductItemComponent) {
@@ -29,9 +35,6 @@ ngOnInit(): void {}
 //       });
 //       productComponent.isSelected = true;
 // }
-
-
-
 
 // import { Component, OnInit, ViewChild , ViewChildren ,  QueryList } from '@angular/core';
 // import { Product } from './product';
@@ -66,9 +69,7 @@ ngOnInit(): void {}
 //   //   });
 //   //Recep#2
 //   //Lab 4 - ทดสอบ Reipe#3 ViewChild
-  
 
-  
 //   ngOnInit(): void {  }
 
 //   selectedProduct(productComponent:ProductItemComponent){
@@ -76,26 +77,25 @@ ngOnInit(): void {}
 //     this.productItems.forEach (p => {
 //       p.isSelected = false ;
 //       //console.log(element.isSelected());
-      
+
 //     });
 //       productComponent.isSelected = true ;
-      
+
 //       //console.log(element.isSelected());
 //   }
-  
-  
-  // selectedProduct(productComponent:ProductItemComponent){
-  //   alert(`Product ${productComponent.product.name} Selected`);
-  //   this.productItems.forEach (p => {
-  //     p.isSelected = false;
-      
-  //   });
-  //   productComponent.isSelected = true ;
-  // }
-  // selectedProduct(product: Product) {
-  //   alert(`Product ${product.name} selected`);
 
-  // } 
-  //ViewChild
+// selectedProduct(productComponent:ProductItemComponent){
+//   alert(`Product ${productComponent.product.name} Selected`);
+//   this.productItems.forEach (p => {
+//     p.isSelected = false;
+
+//   });
+//   productComponent.isSelected = true ;
+// }
+// selectedProduct(product: Product) {
+//   alert(`Product ${product.name} selected`);
+
+// }
+
 
 // }

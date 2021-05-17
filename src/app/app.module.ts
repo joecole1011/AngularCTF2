@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductItemComponent } from './product-list/product-item/product-item.component';
-import { FormsModule } from '@angular/forms';
+
 import { PanelComponent } from './panel/panel.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
-import { TaskItemComponent } from './to-do-list/task-item/task-item.component';
+import { TodoappComponent } from './todoapp/todoapp.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +19,10 @@ import { TaskItemComponent } from './to-do-list/task-item/task-item.component';
     ProductItemComponent,
     PanelComponent,
     ToDoListComponent,
-    TaskItemComponent
+    TodoappComponent,
   ],
-  imports: [
-    BrowserModule ,FormsModule
-  ],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
