@@ -1,27 +1,24 @@
-<!-- <p>to-do-list works!</p> -->
-
+<app-to-do-item *ngFor="let p of tasks" [task] = "p" (OnSelected) ="selectedTask($event)" ></app-to-do-item>
 <div class="container col-12 col-sm-6 col-md-4 p-2 form-group cen">
-  <p>
-    <b> {{ title | uppercase }} </b>
-  </p>
+ 
+  <!-- <ul>
+  <li *ngFor="let x of items; let index = index">
+    {{ x }}
+  </li>
+  <li *ngFor="let y of items2; let index = index">
+    {{ y }}
+    <input (click)="deletetask(index)" type="button" value="Delete" />
+  </li>        
+</ul> -->
+
+
 
   <!-- <ul>
-    <li *ngFor="let x of items; let index = index">
+    <li *ngFor="let p of items; let index = index">
       {{ x }}
-    </li>
-    <li *ngFor="let y of items2; let index = index">
-      {{ y }}
       <input (click)="deletetask(index)" type="button" value="Delete" />
-    </li>        
+    </li>
   </ul> -->
-
-  <ul>
-    <li *ngFor="let x of items; let index = index">
-      {{ x }}
-      <input (click)="deletetask(index)" type="button" value="Delete" />
-    </li>
-    
-  </ul>
 
   <b>Add Task: </b>
   <br />
@@ -29,7 +26,7 @@
   <input [(ngModel)]="name" type="text" value="" id="name" />
   <br />
   <!-- <b>Description: </b>
-  <input [(ngModel)]="description" type="text" value="" id="description" /> -->
+<input [(ngModel)]="description" type="text" value="" id="description" /> -->
   <br />
   <button
     class="btn btn-primary"
@@ -39,3 +36,5 @@
     Add
   </button>
 </div>
+
+  

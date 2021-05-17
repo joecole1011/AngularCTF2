@@ -18,7 +18,7 @@ export class ToDoListComponent implements OnInit {
   // @ViewChildren(TaskItemComponent)
   // taskIteam : QueryList<TaskItemComponent>
 
-  // task : Task[];
+  tasks: Task[];
 
   name;
   items = [];
@@ -26,12 +26,33 @@ export class ToDoListComponent implements OnInit {
   description;
   items2 = [];
 
-  id = 0
+  id = 0;
 
   constructor() {
-    // this.task = [];
+    this.tasks = [];
+    // this.tasks = [];
+    // this.tasks.push({
+    //   id: 1,
+    //   name: 'Akawit',
+    //   description: 'Nasoke'
+    // });
+    // this.tasks.push({
+    //   id: 2,
+    //   name: 'Kim',
+    //   description: 'Zun'
+    // });
+    // this.tasks.push({
+    //   id: 3,
+    //   name: 'Nam',
+    //   description: 'Fha'
+      
+    // });
   }
   ngOnInit() {}
+
+  selectedTask(tack:Task){
+    alert(`Task ${tack.name} selected`)
+  }
 
   addclick() {
     if (this.name == '') {
@@ -45,11 +66,31 @@ export class ToDoListComponent implements OnInit {
       this.items2.push(this.description);
       this.description = '';
     }
-    this.id++
+    this.id++;
   }
 
   public deletetask(index) {
     this.items.splice(index, 1);
     this.items2.splice(index, 1);
   }
+
+  // addclick() {
+  //   if (this.name == '') {
+  //   } else {
+  //     this.items.push(this.name);
+  //     this.name = '';
+  //   }
+
+  //   if (this.description == '') {
+  //   } else {
+  //     this.items2.push(this.description);
+  //     this.description = '';
+  //   }
+  //   this.id++
+  // }
+
+  // public deletetask(index) {
+  //   this.items.splice(index, 1);
+  //   this.items2.splice(index, 1);
+  // }
 }

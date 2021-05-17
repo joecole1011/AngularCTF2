@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ProductListComponent } from './product-list/product-list.component';
+// import { ProductListComponent } from './product-list/product-list.component';
+import { ToDoListComponent } from './to-do-list/to-do-list.component';
 
 @Component({
   selector: 'app-root',
@@ -7,26 +8,49 @@ import { ProductListComponent } from './product-list/product-list.component';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  @ViewChild('productList', { static: true })
-  // @ViewChild('productList') // Recep#2 ตามใน Slide ตารางไม่โชว์
-  productList: ProductListComponent;
+  @ViewChild('taskList', { static: true })
+  taskList: ToDoListComponent;
 
   ngOnInit(): void {
-    this.productList.products = [
+    this.taskList.tasks = [
       {
-        name: 'Ipad',
-        price: 15000,
+        id: 1,
+        name: 'Akawit',
+        description: 'Nasoke',
       },
       {
-        name: 'Iphone 12 Max',
-        price: 50000,
+        id: 2,
+        name: 'Kim',
+        description: 'Zun',
       },
       {
-        name: ' Mac',
-        price: 60000,
+        id: 3,
+        name: 'Nam',
+        description: 'Fha',
       },
     ];
   }
+
+  // @ViewChild('productList', { static: true })
+  // // @ViewChild('productList') // Recep#2 ตามใน Slide ตารางไม่โชว์
+  // productList: ProductListComponent;
+
+  // ngOnInit(): void {
+  //   this.productList.products = [
+  //     {
+  //       name: 'Ipad',
+  //       price: 15000,
+  //     },
+  //     {
+  //       name: 'Iphone 12 Max',
+  //       price: 50000,
+  //     },
+  //     {
+  //       name: ' Mac',
+  //       price: 60000,
+  //     },
+  //   ];
+  // }
   constructor() {}
   // homeTitleValue = `Set home' s title from typescript` Recep#2
 }
