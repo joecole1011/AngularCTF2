@@ -26,7 +26,11 @@ export class ToDoItemComponent implements OnInit {
     this.OnSelected.emit(this);
   }
   delete() {
-    this.tasks.slice(0,1)
+    this.task.name ='';
+    this.task.description = '';
+
+    // this.tasks.slice()
+
     
   // }
 }
