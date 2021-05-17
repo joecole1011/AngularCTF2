@@ -29,8 +29,8 @@ export class AppComponent implements OnInit {
         description: 'Fha',
       },
     ];
-    
   }
+
 
   // @ViewChild('productList', { static: true })
   // // @ViewChild('productList') // Recep#2 ตามใน Slide ตารางไม่โชว์

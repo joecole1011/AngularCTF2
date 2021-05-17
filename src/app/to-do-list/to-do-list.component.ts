@@ -23,8 +23,6 @@ export class ToDoListComponent implements OnInit {
 
   tasks: Task[];
 
-  
-
   constructor() {
     this.tasks = [];
   }
@@ -36,6 +34,4 @@ export class ToDoListComponent implements OnInit {
     });
     taskComponent.isSelected = true;
   }
-
-
 }

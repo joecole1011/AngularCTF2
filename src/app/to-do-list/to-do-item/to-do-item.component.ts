@@ -9,10 +9,12 @@ import { Task } from '../task';
 export class ToDoItemComponent implements OnInit {
   @Input()
   task: Task;
+  tasks: Task[];
 
   @Output()
   // OnSelected: EventEmitter<Task> = new EventEmitter();
   OnSelected: EventEmitter<ToDoItemComponent> = new EventEmitter();
+  // Ondelete: Task[];
 
   isSelected: boolean;
 
@@ -23,4 +25,9 @@ export class ToDoItemComponent implements OnInit {
   select() {
     this.OnSelected.emit(this);
   }
+  delete() {
+    this.tasks.slice(0,1)
+    
+  // }
+}
 }
