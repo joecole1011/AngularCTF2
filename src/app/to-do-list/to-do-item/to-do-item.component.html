@@ -1,19 +1,9 @@
-<div
-  style="
-    width: 200px;
-    display: inline-block;
-    border: 1px solid gray;
-    text-align: center;
-  " class="container col-12 col-sm-6 col-md-4 p-2 form-group cen"
->
+<div class="box" [class.selected]="isSelected">
   <h3>{{ task.name }}</h3>
   <p>
     {{ task.description }}
   </p>
   <p>
-    <button class="btn btn-info" (click)="select()">ลบ</button>
-    
+    <button class="btn btn-info" (click)="select()">เลือก</button>
   </p>
-  
-  
 </div>

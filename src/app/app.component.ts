@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
         description: 'Fha',
       },
     ];
+    
   }
 
   // @ViewChild('productList', { static: true })

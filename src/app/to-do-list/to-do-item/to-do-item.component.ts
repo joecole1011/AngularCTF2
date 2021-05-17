@@ -11,13 +11,16 @@ export class ToDoItemComponent implements OnInit {
   task: Task;
 
   @Output()
-  OnSelected: EventEmitter<Task> = new EventEmitter();
+  // OnSelected: EventEmitter<Task> = new EventEmitter();
+  OnSelected: EventEmitter<ToDoItemComponent> = new EventEmitter();
+
+  isSelected: boolean;
 
   constructor() {}
 
   ngOnInit(): void {}
 
   select() {
-    this.OnSelected.emit(this.task);
+    this.OnSelected.emit(this);
   }
 }

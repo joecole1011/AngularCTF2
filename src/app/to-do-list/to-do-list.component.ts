@@ -6,6 +6,7 @@ import {
   QueryList,
 } from '@angular/core';
 import { Task } from './task';
+import { ToDoItemComponent } from './to-do-item/to-do-item.component';
 
 @Component({
   selector: 'app-to-do-list',
@@ -13,84 +14,28 @@ import { Task } from './task';
   styleUrls: ['./to-do-list.component.css'],
 })
 export class ToDoListComponent implements OnInit {
-  title = 'ToDoListComponent';
-
+  title = 'ToDoItemComponent';
   // @ViewChildren(TaskItemComponent)
   // taskIteam : QueryList<TaskItemComponent>
 
+  @ViewChildren(ToDoItemComponent)
+  taskItems: QueryList<ToDoItemComponent>;
+
   tasks: Task[];
 
-  name;
-  items = [];
-
-  description;
-  items2 = [];
-
-  id = 0;
+  
 
   constructor() {
     this.tasks = [];
-    // this.tasks = [];
-    // this.tasks.push({
-    //   id: 1,
-    //   name: 'Akawit',
-    //   description: 'Nasoke'
-    // });
-    // this.tasks.push({
-    //   id: 2,
-    //   name: 'Kim',
-    //   description: 'Zun'
-    // });
-    // this.tasks.push({
-    //   id: 3,
-    //   name: 'Nam',
-    //   description: 'Fha'
-      
-    // });
   }
   ngOnInit() {}
-
-  selectedTask(tack:Task){
-    alert(`Task ${tack.name} selected`)
+  selectedTask(taskComponent: ToDoItemComponent) {
+    alert(`Task ${taskComponent.task.name} selected`);
+    this.taskItems.forEach((p) => {
+      p.isSelected = false;
+    });
+    taskComponent.isSelected = true;
   }
 
-  addclick() {
-    if (this.name == '') {
-    } else {
-      this.items.push(this.name);
-      this.name = '';
-    }
 
-    if (this.description == '') {
-    } else {
-      this.items2.push(this.description);
-      this.description = '';
-    }
-    this.id++;
-  }
-
-  public deletetask(index) {
-    this.items.splice(index, 1);
-    this.items2.splice(index, 1);
-  }
-
-  // addclick() {
-  //   if (this.name == '') {
-  //   } else {
-  //     this.items.push(this.name);
-  //     this.name = '';
-  //   }
-
-  //   if (this.description == '') {
-  //   } else {
-  //     this.items2.push(this.description);
-  //     this.description = '';
-  //   }
-  //   this.id++
-  // }
-
-  // public deletetask(index) {
-  //   this.items.splice(index, 1);
-  //   this.items2.splice(index, 1);
-  // }
 }
