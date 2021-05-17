@@ -26,12 +26,44 @@ export class ToDoItemComponent implements OnInit {
     this.OnSelected.emit(this);
   }
   delete() {
-    this.task.name ='';
+    this.task.name = '';
     this.task.description = '';
 
     // this.tasks.slice()
 
+    // }
+  }
+  //ts
+  // CreateUser:string = "Enter UserName"
+
+  // userlist = []
+  // onclick(prouser){
     
+  //   if(prouser.value.length > 0)
+  //   {
+  //     this.userlist.push(prouser.value);
+  //     prouser.value = '';
+  //   }
   // }
-}
+
+  // ondelete(deleteme)
+  // {
+  //   this.userlist.splice(deleteme,1)
+  // }
+
+  //Summary
+  //ref variable
+  //attibute binding
+  //click event
+  //function with parameter
+  //Array
+  //Array push method
+  //Array splice method
+  //ngfor structural directives
+  //if condition
+  //html
+  
+
+
+
 }
