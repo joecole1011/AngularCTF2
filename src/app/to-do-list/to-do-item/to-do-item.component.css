@@ -1,11 +1,16 @@
 .box {
   width: 200px;
   /* display: inline-block; */
-  border: 1px solid gray;
+  border: 2px solid dodgerblue;
   text-align: center;
 
 }
-.selected{
-    background: lightgray;
-    
+
+.selected {
+  background: greenyellow;
+
+}
+
+.deleted {
+  display: none;
 }

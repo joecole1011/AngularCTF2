@@ -1,4 +1,4 @@
-<div class="box" [class.selected]="isSelected">
+<div class="box" [class.selected]="isSelected" [class.deleted]="isDeleted">
   
   <h3>{{ task.name }}</h3>
   <h3>
@@ -7,9 +7,7 @@
   <p>
     <button class="btn btn-info" (click)="select()">เลือก</button>
   </p>
-  <p>
-    
-  </p>
+ 
   <p>
     <button class="btn btn-danger" (click)="delete()">ลบ</button>
     <!-- <input class="btn btn-danger" (click)="delete()" type="button" value="Delete"/> -->

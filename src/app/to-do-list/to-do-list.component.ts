@@ -29,15 +29,16 @@ export class ToDoListComponent implements OnInit {
   ngOnInit() {}
   selectedTask(taskComponent: ToDoItemComponent) {
     alert(`Task ${taskComponent.task.name} selected`);
+
     this.taskItems.forEach((p) => {
       p.isSelected = false;
     });
     taskComponent.isSelected = true;
   }
-  deleteTask(deleteTaskComponent:ToDoItemComponent ){
-    this.taskItems.forEach((l)=>{
-      l.isDelete = false;
+  deletedTask(deleteTaskComponent: ToDoItemComponent) {
+    this.taskItems.forEach((p) => {
+      p.isDeleted = false;
     });
-    deleteTaskComponent.isDelete = true;
+    deleteTaskComponent.isDeleted = true;
   }
 }
