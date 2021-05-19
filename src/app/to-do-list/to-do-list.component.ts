@@ -34,4 +34,7 @@ export class ToDoListComponent implements OnInit {
     });
     taskComponent.isSelected = true;
   }
+  deleteTask(deleteTaskComponent:ToDoItemComponent ){
+    
+  }
 }

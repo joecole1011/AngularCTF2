@@ -12,11 +12,12 @@ export class ToDoItemComponent implements OnInit {
   tasks: Task[];
 
   @Output()
-  // OnSelected: EventEmitter<Task> = new EventEmitter();
   OnSelected: EventEmitter<ToDoItemComponent> = new EventEmitter();
-  // Ondelete: Task[];
-
+  OnDelete: EventEmitter<ToDoItemComponent> = new EventEmitter();
+  
   isSelected: boolean;
+
+  isDelete: boolean;
 
   constructor() {}
 
@@ -26,8 +27,9 @@ export class ToDoItemComponent implements OnInit {
     this.OnSelected.emit(this);
   }
   delete() {
-    this.task.name = '';
-    this.task.description = '';
+    this.OnDelete.emit(this);
+    // this.task.name = '';
+    // this.task.description = '';
 
     // this.tasks.slice()
 
