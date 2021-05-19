@@ -9,7 +9,7 @@ import { Task } from '../task';
 export class ToDoItemComponent implements OnInit {
   @Input()
   task: Task;
-  tasks: Task[];
+
 
   @Output()
   OnSelected: EventEmitter<ToDoItemComponent> = new EventEmitter();
@@ -30,10 +30,7 @@ export class ToDoItemComponent implements OnInit {
     this.OnDeleted.emit(this);
     this.task.name = '';
     this.task.description = '';
-
-    // this.tasks.slice()
-
-    // }
+    
   }
   //ts
   // CreateUser:string = "Enter UserName"

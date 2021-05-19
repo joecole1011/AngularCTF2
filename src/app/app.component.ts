@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-// import { ProductListComponent } from './product-list/product-list.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
-
+import { Task } from './to-do-list/task';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,6 +9,15 @@ import { ToDoListComponent } from './to-do-list/to-do-list.component';
 export class AppComponent implements OnInit {
   @ViewChild('taskList', { static: true })
   taskList: ToDoListComponent;
+
+
+  task: Task[];
+
+  name;
+  items = [];
+
+  description;
+  items2 = [];
 
   ngOnInit(): void {
     this.taskList.tasks = [
@@ -30,28 +38,21 @@ export class AppComponent implements OnInit {
       },
     ];
   }
+  addclick() {
+      
+    // if (this.name == '') {
+    // } else {
+    //   this.items.push(this.name);
+    //   this.name = '';
+    // }
 
+    // if (this.description == '') {
+    // } else {
+    //   this.items2.push(this.description);
+    //   this.description = '';
+    // }
+    console.log('test');
+  }
 
-  // @ViewChild('productList', { static: true })
-  // // @ViewChild('productList') // Recep#2 ตามใน Slide ตารางไม่โชว์
-  // productList: ProductListComponent;
-
-  // ngOnInit(): void {
-  //   this.productList.products = [
-  //     {
-  //       name: 'Ipad',
-  //       price: 15000,
-  //     },
-  //     {
-  //       name: 'Iphone 12 Max',
-  //       price: 50000,
-  //     },
-  //     {
-  //       name: ' Mac',
-  //       price: 60000,
-  //     },
-  //   ];
-  // }
   constructor() {}
-  // homeTitleValue = `Set home' s title from typescript` Recep#2
 }

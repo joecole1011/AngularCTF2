@@ -1,6 +1,24 @@
-<div>
-  <h2>TODOLISTCOMPONENT</h2>
-  <app-to-do-list #taskList>  </app-to-do-list>
+<h2>TODOLISTCOMPONENT</h2>
+<app-to-do-list #taskList></app-to-do-list>
+<div class="container col-4">
+  <b>Add Task: </b>
+  <br />
+  <b>Name: </b>
+  <input [(ngModel)]="name" type="text" value="" id="name" />
+  <br />
+  <b>Description: </b>
+  <input [(ngModel)]="description" type="text" value="" id="description" />
+  <br />
+  <!-- <b>Description: </b>
+<input [(ngModel)]="description" type="text" value="" id="description" /> -->
+  <br />
+  <button
+    class="btn btn-primary"
+    ngClass="{buttonColor: false}"
+    (click)="addclick()"
+  >
+    Add
+  </button>
 </div>
 
 <!-- <app-to-do-list></app-to-do-list>
